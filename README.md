@@ -1,6 +1,6 @@
 # OB360 Website
 
-Static site for OB360 — no backend, no build step, $0 hosting. Content (portfolio + services) is editable through a free admin dashboard (Decap CMS) without touching code.
+Static site for OB360 — a brand identity studio. No backend, no build step, $0 hosting. Content (portfolio + services) is editable through a free admin dashboard (Decap CMS) without touching code.
 
 ## What's included
 
