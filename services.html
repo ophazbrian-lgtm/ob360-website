@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — OB360</title>
+<meta name="description" content="Branding, packaging, web design, social media, video, and advertising — full-service design from OB360.">
+<link rel="icon" href="/images/ob360-logo.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div data-include="header"></div>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb">Home / Services</div>
+    <h1>What We Do</h1>
+    <p>Pick what you need, or tell us the problem and we'll figure out the right mix. Every project is quoted individually — no fixed packages, no surprises.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" data-services-grid></div>
+</section>
+
+<section class="section bg-soft text-center">
+  <div class="wrap" style="max-width:600px;">
+    <span class="eyebrow">Not sure what you need?</span>
+    <h2 style="margin-top:10px;">Tell us the problem, not the service.</h2>
+    <p style="margin-top:14px;">Most clients come to us with a goal, not a service name. Tell us what you're trying to do and we'll scope the right combination — and quote it straight up.</p>
+    <a href="/contact.html" class="btn btn-primary" style="margin-top:24px;">Get a Free Quote →</a>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="/js/main.js"></script>
+<script src="/js/content.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    OB360Content.renderServices('[data-services-grid]');
+  });
+</script>
+</body>
+</html>

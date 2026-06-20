@@ -1,0 +1,4 @@
+[build]
+  publish = "."
+
+# Static site, no build step — Netlify just serves the files as-is.

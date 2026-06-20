@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images get saved + the path used to reference them in content.
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://your-site-name.netlify.app
+display_url: https://your-site-name.netlify.app
+logo_url: /images/ob360-logo.png
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Items"
+    files:
+      - file: "content/portfolio.json"
+        label: "Portfolio"
+        name: "portfolio"
+        format: json
+        fields:
+          - { label: "Projects", name: "items", widget: "list", fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "select", options: ["Branding", "Web", "Social Media", "Print"] }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Link (e.g. Behance project URL)", name: "link", widget: "string" }
+            }
+
+  - name: "services"
+    label: "Services"
+    files:
+      - file: "content/services.json"
+        label: "Services"
+        name: "services"
+        format: json
+        fields:
+          - { label: "Services", name: "items", widget: "list", fields:
+              - { label: "ID (used as page anchor, no spaces)", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Bullet Points", name: "bullets", widget: "list" }
+            }

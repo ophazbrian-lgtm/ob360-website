@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — OB360</title>
+<meta name="description" content="Branding, web, social, and print design work from the OB360 studio.">
+<link rel="icon" href="/images/ob360-logo.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div data-include="header"></div>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb">Home / Work</div>
+    <h1>Selected Work</h1>
+    <p>A mix of branding, web, social, and print projects. More case studies added as new work ships.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="chip-row mb-32" data-filters>
+      <button class="chip" data-cat="" style="background:var(--ink);color:var(--white);">All</button>
+      <button class="chip" data-cat="Branding">Branding</button>
+      <button class="chip" data-cat="Web">Web</button>
+      <button class="chip" data-cat="Social Media">Social Media</button>
+      <button class="chip" data-cat="Print">Print</button>
+    </div>
+    <div data-portfolio-grid></div>
+  </div>
+</section>
+
+<section class="section bg-yellow text-center">
+  <div class="wrap">
+    <h2>Like what you see?</h2>
+    <p style="color:var(--ink);max-width:480px;margin:14px auto 24px;">Let's talk about what you're building — we'll quote it within 1 business day.</p>
+    <a href="/contact.html" class="btn btn-primary">Start Your Project →</a>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="/js/main.js"></script>
+<script src="/js/content.js"></script>
+<script>
+  let allItems = [];
+
+  function renderFiltered(cat) {
+    const el = document.querySelector('[data-portfolio-grid]');
+    const list = cat ? allItems.filter((i) => i.category === cat) : allItems;
+    if (!list.length) {
+      el.innerHTML = '<p>No projects in this category yet.</p>';
+      return;
+    }
+    el.innerHTML = '<div class="grid-portfolio">' + list.map((p) => `
+      <a href="${p.link}" target="_blank" rel="noopener" class="port-card reveal">
+        <img src="${p.image}" alt="${p.title}" loading="lazy">
+        <div class="port-overlay">
+          <span class="tag">${p.category}</span>
+          <h3>${p.title}</h3>
+        </div>
+      </a>`).join('') + '</div>';
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    const data = await OB360Content.fetchJSON('/content/portfolio.json');
+    allItems = data.items || [];
+    renderFiltered('');
+
+    document.querySelectorAll('[data-filters] button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-filters] button').forEach((b) => {
+          b.style.background = 'var(--white)';
+          b.style.color = 'var(--ink)';
+        });
+        btn.style.background = 'var(--ink)';
+        btn.style.color = 'var(--white)';
+        renderFiltered(btn.getAttribute('data-cat'));
+      });
+    });
+  });
+</script>
+</body>
+</html>

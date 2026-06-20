@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "id": "branding",
+      "title": "Branding & Logo Design",
+      "summary": "A visual identity built to hold up across packaging, web, and social \u2014 not just a logo file.",
+      "bullets": [
+        "Logo & mark design",
+        "Brand guidelines",
+        "Color & type systems",
+        "Brand collateral"
+      ]
+    },
+    {
+      "id": "marketing",
+      "title": "Marketing Materials",
+      "summary": "Brochures, flyers, and posters that actually get read, not just printed.",
+      "bullets": [
+        "Brochures & one-pagers",
+        "Flyers & posters",
+        "Trade show materials",
+        "Sales decks"
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Website Design & Development",
+      "summary": "Sites designed to convert visitors into customers, built clean enough to maintain yourself.",
+      "bullets": [
+        "Landing pages",
+        "Full website builds",
+        "WordPress & no-code",
+        "Conversion-focused UX"
+      ]
+    },
+    {
+      "id": "packaging",
+      "title": "Packaging Design",
+      "summary": "Shelf-ready packaging for beauty and wellness brands \u2014 print-production accurate, not just a mockup.",
+      "bullets": [
+        "Box & label design",
+        "Print-ready files",
+        "Mockups & 3D renders",
+        "Retail-shelf strategy"
+      ]
+    },
+    {
+      "id": "social",
+      "title": "Social Media Graphics",
+      "summary": "Scroll-stopping content systems for Instagram, TikTok, and Meta ads \u2014 built to a content calendar.",
+      "bullets": [
+        "Post & carousel templates",
+        "Story & Reel covers",
+        "Ad creatives",
+        "Content calendars"
+      ]
+    },
+    {
+      "id": "video",
+      "title": "Video & Animation",
+      "summary": "Short-form edits, motion graphics, and explainer animation for product launches and ad campaigns.",
+      "bullets": [
+        "Short-form video edits",
+        "Motion graphics",
+        "Explainer animation",
+        "Ad creative video"
+      ]
+    },
+    {
+      "id": "advertising",
+      "title": "Print & Digital Advertising",
+      "summary": "Ad creative built for the platform it's running on \u2014 Meta, Google, print, or out-of-home.",
+      "bullets": [
+        "Meta & Google ad creative",
+        "Print advertising",
+        "Display banners",
+        "Campaign concepts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — OB360</title>
+<meta name="description" content="Start a project with OB360 — tell us about your brand and we'll quote it within 1 business day.">
+<link rel="icon" href="/images/ob360-logo.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div data-include="header"></div>
+
+<div class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb">Home / Contact</div>
+    <h1>Let's Start Your Project</h1>
+    <p>Tell us what you're building. We reply with a scoped quote within 1 business day.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;">
+    <div>
+      <h3>Direct Contact</h3>
+      <p style="margin-top:10px;">Prefer email or WhatsApp? Reach us directly:</p>
+      <p style="margin-top:14px;"><strong>Email:</strong><br><a href="mailto:hello@ob360.studio">hello@ob360.studio</a></p>
+      <p style="margin-top:10px;"><strong>WhatsApp:</strong><br>+92 307 2528980</p>
+      <p style="margin-top:10px;"><strong>Based in:</strong><br>Karachi, Pakistan — working US &amp; UK hours</p>
+      <h3 style="margin-top:32px;">How Pricing Works</h3>
+      <p style="margin-top:10px;">We don't use fixed packages — every brand needs something different. Tell us your scope below and we'll reply with a clear, honest quote.</p>
+    </div>
+
+    <div>
+      <!--
+        Netlify Forms: this works automatically once deployed on Netlify —
+        no backend code needed. Submissions show up in
+        Site settings → Forms in the Netlify dashboard, and you can
+        connect email notifications there for free.
+      -->
+      <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
+        <input type="hidden" name="form-name" value="project-inquiry">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-field">
+            <label for="company">Company / Brand</label>
+            <input id="company" name="company" type="text">
+          </div>
+          <div class="form-field">
+            <label for="budget">Approx. Budget</label>
+            <select id="budget" name="budget">
+              <option>Under $500</option>
+              <option>$500 – $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="service">Service Needed</label>
+            <input id="service" name="service" type="text" placeholder="e.g. Branding, Website, Packaging">
+          </div>
+          <div class="form-field full">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="6" required placeholder="What are you building, what's the timeline, and what does success look like?"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Project Details →</button>
+        <div data-form-note></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<script src="/js/main.js"></script>
+<script>
+  // Pre-fill the service field from ?service= query param (used by service cards).
+  document.addEventListener('DOMContentLoaded', () => {
+    const service = new URLSearchParams(location.search).get('service');
+    if (service) {
+      const field = document.getElementById('service');
+      if (field) field.value = service;
+    }
+
+    // Netlify handles the actual submission natively (this is a real HTML
+    // form POST). This just gives a friendly inline confirmation if JS is
+    // enabled; if it's disabled, Netlify's own redirect still works fine.
+    const form = document.querySelector('[data-contact-form]');
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const note = form.querySelector('[data-form-note]');
+      const btn = form.querySelector('button[type="submit"]');
+      const data = new FormData(form);
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+        .then(() => {
+          note.innerHTML = '<div class="form-note ok">Thanks — got it. We\'ll reply with a quote within 1 business day.</div>';
+          form.reset();
+        })
+        .catch(() => {
+          note.innerHTML = '<div class="form-note err">Something went wrong. Please email hello@ob360.studio directly.</div>';
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btn.textContent = 'Send Project Details →';
+        });
+    });
+  });
+</script>
+</body>
+</html>
