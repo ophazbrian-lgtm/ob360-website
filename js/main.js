@@ -20,17 +20,9 @@
     const nav = document.querySelector('[data-nav]');
     if (!toggle || !nav) return;
     toggle.addEventListener('click', () => {
-      const open = nav.style.display === 'flex';
-      nav.style.display = open ? 'none' : 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.position = 'absolute';
-      nav.style.top = '100%';
-      nav.style.left = '0';
-      nav.style.right = '0';
-      nav.style.background = '#FFFFFF';
-      nav.style.padding = '20px 24px';
-      nav.style.gap = '16px';
-      nav.style.borderBottom = '1px solid rgba(11,11,11,0.12)';
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
   }
 
@@ -58,4 +50,6 @@
     wireMobileNav();
     wireRevealOnScroll();
   });
+
+  window.OB360 = { wireRevealOnScroll };
 })();
