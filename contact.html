@@ -15,8 +15,8 @@
 <div class="page-header">
   <div class="wrap">
     <div class="breadcrumb">Home / Contact</div>
-    <h1>Let's Start Your Project</h1>
-    <p>Tell us what you're building. We reply with a scoped quote within 1 business day.</p>
+    <h1 data-content="pages.contact.title">Let's Start Your Project</h1>
+    <p data-content="pages.contact.intro">Tell us what you're building. We reply with a scoped quote within 1 business day.</p>
   </div>
 </div>
 
@@ -25,9 +25,9 @@
     <div>
       <h3>Direct Contact</h3>
       <p style="margin-top:10px;">Prefer email or WhatsApp? Reach us directly:</p>
-      <p style="margin-top:14px;"><strong>Email:</strong><br><a href="mailto:hello@ob360.studio">hello@ob360.studio</a></p>
-      <p style="margin-top:10px;"><strong>WhatsApp:</strong><br>+92 307 2528980</p>
-      <p style="margin-top:10px;"><strong>Based in:</strong><br>Karachi, Pakistan — working US &amp; UK hours</p>
+      <p style="margin-top:14px;"><strong>Email:</strong><br><a href="mailto:hello@ob360.studio" data-content="pages.contact.email" data-email-href="pages.contact.email">hello@ob360.studio</a></p>
+      <p style="margin-top:10px;"><strong>WhatsApp:</strong><br><span data-content="pages.contact.whatsapp">+92 307 2528980</span></p>
+      <p style="margin-top:10px;"><strong>Based in:</strong><br><span data-content="pages.contact.location">Karachi, Pakistan — working US &amp; UK hours</span></p>
       <h3 style="margin-top:32px;">How Pricing Works</h3>
       <p style="margin-top:10px;">We don't use fixed packages — every brand needs something different. Tell us your scope below and we'll reply with a clear, honest quote.</p>
     </div>
@@ -84,6 +84,7 @@
 
 <div data-include="footer"></div>
 
+<script src="/js/site-settings.js"></script>
 <script src="/js/main.js"></script>
 <script>
   // Pre-fill the service field from ?service= query param (used by service cards).

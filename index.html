@@ -12,15 +12,15 @@
 
 <div data-include="header"></div>
 
-<section class="hero hex-grid-bg">
+<section class="hero hex-grid-bg" data-hero-layout>
   <div class="wrap hero-inner">
     <div>
-      <span class="eyebrow">Brand Identity Studio · Karachi → Worldwide</span>
-      <h1>Branding is the <mark>gut feeling</mark> people get about you — before they read a word.</h1>
-      <p class="lead">We design brand identities, guidelines, and creative direction for business owners, founders, and serious personal brands who want to be remembered, not just seen.</p>
+      <span class="eyebrow" data-content="home.eyebrow">Brand Identity Studio · Karachi → Worldwide</span>
+      <h1 data-home-headline>Branding is the <mark>gut feeling</mark> people get about you — before they read a word.</h1>
+      <p class="lead" data-content="home.lead">We design brand identities, guidelines, and creative direction for business owners, founders, and serious personal brands who want to be remembered, not just seen.</p>
       <div class="hero-ctas">
-        <a href="/contact.html" class="btn btn-accent">Get a Brand Consultation →</a>
-        <a href="/work.html" class="btn btn-outline">See Our Work</a>
+        <a href="/contact.html" class="btn btn-accent" data-content="home.primaryCta">Get a Brand Consultation →</a>
+        <a href="/work.html" class="btn btn-outline" data-content="home.secondaryCta">See Our Work</a>
       </div>
       <div class="hero-meta">
         <div><strong>19+ yrs</strong>Combined design experience</div>
@@ -36,7 +36,7 @@
         <div class="hex-cell outline" style="width:26%;height:26%;bottom:4%;right:6%;"></div>
         <div class="hex-cell fill-yellow" style="width:22%;height:22%;top:38%;right:24%;"></div>
       </div>
-      <img src="/images/ob360-logo.png" alt="OB360 bee mark" class="logo-float" style="width:30%;">
+      <img src="/images/ob360-logo.png" alt="OB360 bee mark" class="logo-float" data-content-src="brand.logo" data-content-alt="brand.logoAlt" style="width:30%;">
     </div>
   </div>
 </section>
@@ -173,6 +173,7 @@
 
 <div data-include="footer"></div>
 
+<script src="/js/site-settings.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/content.js"></script>
 <script>
