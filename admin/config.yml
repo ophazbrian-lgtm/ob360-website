@@ -2,41 +2,123 @@ backend:
   name: git-gateway
   branch: main
 
-# Where uploaded images get saved + the path used to reference them in content.
+publish_mode: editorial_workflow
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
-site_url: https://your-site-name.netlify.app
-display_url: https://your-site-name.netlify.app
+site_url: https://ob360.netlify.app
+display_url: https://ob360.netlify.app
 logo_url: /images/ob360-logo.png
 
 collections:
-  - name: "portfolio"
-    label: "Portfolio Items"
+  - name: site_editor
+    label: Website editor
     files:
-      - file: "content/portfolio.json"
-        label: "Portfolio"
-        name: "portfolio"
+      - name: site_settings
+        label: Brand, text & layout
+        file: content/site-settings.json
         format: json
         fields:
-          - { label: "Projects", name: "items", widget: "list", fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Category", name: "category", widget: "select", options: ["Branding", "Web", "Social Media", "Print"] }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Link (e.g. Behance project URL)", name: "link", widget: "string" }
-            }
+          - label: Brand
+            name: brand
+            widget: object
+            fields:
+              - { label: Logo, name: logo, widget: image, hint: "Upload a PNG or SVG with a transparent background." }
+              - { label: Logo description, name: logoAlt, widget: string }
+              - { label: Announcement bar, name: announcement, widget: string }
+              - { label: Header button label, name: consultLabel, widget: string }
+          - label: Style controls
+            name: design
+            widget: object
+            fields:
+              - { label: Accent colour, name: accent, widget: color, default: "#f4c84b" }
+              - { label: Highlight colour, name: highlight, widget: color, default: "#e2593e" }
+              - { label: Background colour, name: background, widget: color, default: "#f4f0e8" }
+              - label: Homepage hero layout
+                name: heroLayout
+                widget: select
+                options:
+                  - { label: Visual on the right, value: visual-right }
+                  - { label: Visual on the left, value: visual-left }
+          - label: Homepage
+            name: home
+            widget: object
+            fields:
+              - { label: Small line above headline, name: eyebrow, widget: string }
+              - { label: Headline — first part, name: headlineBefore, widget: string }
+              - { label: Headline — highlighted words, name: headlineHighlight, widget: string }
+              - { label: Headline — final part, name: headlineAfter, widget: string }
+              - { label: Intro paragraph, name: lead, widget: text }
+              - { label: Main button, name: primaryCta, widget: string }
+              - { label: Second button, name: secondaryCta, widget: string }
+          - label: Page headers & contact details
+            name: pages
+            widget: object
+            fields:
+              - label: Services page
+                name: services
+                widget: object
+                fields:
+                  - { label: Heading, name: title, widget: string }
+                  - { label: Intro, name: intro, widget: text }
+              - label: Work page
+                name: work
+                widget: object
+                fields:
+                  - { label: Heading, name: title, widget: string }
+                  - { label: Intro, name: intro, widget: text }
+              - label: About page
+                name: about
+                widget: object
+                fields:
+                  - { label: Heading, name: title, widget: string }
+                  - { label: Intro, name: intro, widget: text }
+              - label: Contact page
+                name: contact
+                widget: object
+                fields:
+                  - { label: Heading, name: title, widget: string }
+                  - { label: Intro, name: intro, widget: text }
+                  - { label: Email, name: email, widget: string }
+                  - { label: WhatsApp, name: whatsapp, widget: string }
+                  - { label: Location / hours, name: location, widget: string }
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Studio description, name: description, widget: text }
+              - { label: Location, name: location, widget: string }
+              - { label: Working hours, name: hours, widget: string }
 
-  - name: "services"
-    label: "Services"
+  - name: portfolio
+    label: Portfolio
     files:
-      - file: "content/services.json"
-        label: "Services"
-        name: "services"
+      - file: content/portfolio.json
+        label: Portfolio projects
+        name: portfolio
         format: json
         fields:
-          - { label: "Services", name: "items", widget: "list", fields:
-              - { label: "ID (used as page anchor, no spaces)", name: "id", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Bullet Points", name: "bullets", widget: "list" }
-            }
+          - label: Projects
+            name: items
+            widget: list
+            fields:
+              - { label: Project title, name: title, widget: string }
+              - { label: Category, name: category, widget: select, options: [Branding, Web, Social Media, Print] }
+              - { label: Image, name: image, widget: image }
+              - { label: Project link, name: link, widget: string, required: false }
+
+  - name: services
+    label: Services
+    files:
+      - file: content/services.json
+        label: Service cards
+        name: services
+        format: json
+        fields:
+          - label: Services
+            name: items
+            widget: list
+            fields:
+              - { label: Internal ID (no spaces), name: id, widget: string }
+              - { label: Service title, name: title, widget: string }
+              - { label: Summary, name: summary, widget: text }
+              - { label: Bullet points, name: bullets, widget: list }
