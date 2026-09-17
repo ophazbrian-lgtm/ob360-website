@@ -46,6 +46,7 @@
   document.addEventListener('DOMContentLoaded', async () => {
     await injectPartial('[data-include="header"]', '/partials/header.html');
     await injectPartial('[data-include="footer"]', '/partials/footer.html');
+    if (window.OB360Settings) await window.OB360Settings.loadAndApply();
     markActiveNav();
     wireMobileNav();
     wireRevealOnScroll();
