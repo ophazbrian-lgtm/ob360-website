@@ -37,6 +37,7 @@
       const services = data.items || [];
       const list = opts && opts.limit ? services.slice(0, opts.limit) : services;
       el.innerHTML = '<div class="grid-services">' + list.map(serviceCard).join('') + '</div>';
+      if (window.OB360) window.OB360.wireRevealOnScroll();
     } catch (e) {
       el.innerHTML = '<p>Could not load services right now.</p>';
     }
@@ -51,6 +52,7 @@
       const items = data.items || [];
       const list = opts && opts.limit ? items.slice(0, opts.limit) : items;
       el.innerHTML = '<div class="grid-portfolio">' + list.map(portfolioCard).join('') + '</div>';
+      if (window.OB360) window.OB360.wireRevealOnScroll();
     } catch (e) {
       el.innerHTML = '<p>Could not load portfolio right now.</p>';
     }
