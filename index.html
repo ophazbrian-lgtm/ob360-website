@@ -173,6 +173,11 @@
 
 <div data-include="footer"></div>
 
+<script>
+  if (window.location.hash.includes('invite_token=')) {
+    window.location.replace(`/admin/${window.location.hash}`);
+  }
+</script>
 <script src="/js/site-settings.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/content.js"></script>

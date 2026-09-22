@@ -50,7 +50,7 @@ The CMS handles portfolio + services. For anything else — hero headline, about
 
 ## A few things to swap before sending this to real prospects
 
-1. **Email address** — `contact.html` currently shows `hello@ob360.studio` as a placeholder. Update it to your real email/WhatsApp.
+1. **Email address** — `contact.html` uses `ophaz.brian@gmail.com` for direct enquiries.
 2. **Portfolio images** — currently hotlinked from Behance's CDN for speed. Once live, it's safer to download those images and re-upload them through the CMS (Behance could change/remove a URL down the line and break an image).
 3. **Stats section** — "15+ years combined experience" etc. are from your business plan; double check these numbers are exactly how you want them framed publicly.
 

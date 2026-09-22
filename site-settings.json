@@ -1,0 +1,12 @@
+{
+  "brand": {"logo": "/images/ob360-logo.png", "logoAlt": "OB360 logo", "announcement": "Now booking new brand & web projects for Q3 • Beauty & healthcare specialists", "consultLabel": "Get a Brand Consult"},
+  "design": {"accent": "#f4c84b", "highlight": "#e2593e", "background": "#f4f0e8", "heroLayout": "visual-right"},
+  "home": {"eyebrow": "Brand Identity Studio · Karachi → Worldwide", "headlineBefore": "Branding is the ", "headlineHighlight": "gut feeling", "headlineAfter": " people get about you — before they read a word.", "lead": "We design brand identities, guidelines, and creative direction for business owners, founders, and serious personal brands who want to be remembered, not just seen.", "primaryCta": "Get a Brand Consultation →", "secondaryCta": "See Our Work"},
+  "pages": {
+    "services": {"title": "What We Do", "intro": "One focus: brand identity, done at a level that holds up everywhere you show up. Every project is quoted individually — no fixed packages."},
+    "work": {"title": "Selected Work", "intro": "A mix of brand identity, web, social, and print work — branding is the throughline, even where the output isn't a logo."},
+    "about": {"title": "Two designers, one focus: making brands feel like one thing.", "intro": "OB360 was founded in 2023 in Karachi, Pakistan — built around a simple belief: branding is the gut feeling someone gets about you before they read a word, and that feeling is worth designing on purpose."},
+    "contact": {"title": "Let's Start Your Project", "intro": "Tell us what you're building. We reply with a scoped quote within 1 business day.", "email": "ophaz.brian@gmail.com", "whatsapp": "+92 307 2528980", "location": "Karachi, Pakistan — working US & UK hours"}
+  },
+  "footer": {"description": "A Karachi-based brand identity studio designing identities, guidelines, and creative direction for businesses, founders, and serious personal brands worldwide.", "location": "Karachi, Pakistan", "hours": "Working US & UK hours"}
+}
