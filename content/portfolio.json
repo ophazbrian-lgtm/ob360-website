@@ -1,58 +1,10 @@
 {
   "items": [
-    {
-      "title": "Beavaro \u2014 Full Brand Identity System",
-      "category": "Branding",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/ff6068247105731.Y3JvcCw4MDgsNjMyLDAsMA.png",
-      "link": "https://www.behance.net/gallery/247105731/Beavaro-Full-Brand-Identity-System-Visual-Language"
-    },
-    {
-      "title": "Social Media Ad Campaign",
-      "category": "Social Media",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/a1a01c233251925.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
-      "link": "https://www.behance.net/gallery/233251925/Social-Media-Ads"
-    },
-    {
-      "title": "Vehicle Branding & Wrap",
-      "category": "Branding",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/ef65df233124179.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
-      "link": "https://www.behance.net/gallery/233124179/Vehicle-Vinyl-Vehicle-Branding-Vehicle-Wrap"
-    },
-    {
-      "title": "Infographics Design",
-      "category": "Print",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/1ebb53233122407.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
-      "link": "https://www.behance.net/gallery/233122407/Infographics-Design"
-    },
-    {
-      "title": "UI / Landing Page \u2014 Utility Warehouse",
-      "category": "Web",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/fc2b54217261079.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
-      "link": "https://www.behance.net/gallery/217261079/UILanding-Page-Design-Utility-Warehouse"
-    },
-    {
-      "title": "Visual Identity \u2014 Ready Solar",
-      "category": "Branding",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fc5fb217256723.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png",
-      "link": "https://www.behance.net/gallery/217256723/Visual-Identity-Ready-Solar"
-    },
-    {
-      "title": "Stationery Design",
-      "category": "Branding",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/3cedf4169275007.Y3JvcCw4NzYsNjg1LDI2NywxNQ.jpg",
-      "link": "https://www.behance.net/gallery/169275007/STATIONERY-DESIGN"
-    },
-    {
-      "title": "Music Poster \u2014 Jokhay, Asim Azhar & Talha Anjum",
-      "category": "Print",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/224a27247110161.Y3JvcCw4MDgsNjMyLDAsMA.jpg",
-      "link": "https://www.behance.net/gallery/247110161/Music-Poster-Jokhay-Asim-Azhar-Talha-Anjum"
-    },
-    {
-      "title": "Virtual Meeting Backgrounds",
-      "category": "Social Media",
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/eed468233120851.Y3JvcCwxMzgwLDEwODAsMjcwLDA.jpg",
-      "link": "https://www.behance.net/gallery/233120851/Virtual-Meeeting-Backgrounds"
-    }
+    {"id":"beavaro","title":"Beavaro","category":"Branding","image":"https://ophaz.com/assets/guide-1.webp","summary":"Naming, identity, guidelines and practical launch assets.","link":"/case-studies.html?project=beavaro"},
+    {"id":"lucky-core","title":"Lucky Core Industries","category":"Campaigns","image":"https://ophaz.com/assets/lci/lucky-core-logo.svg","summary":"Campaign systems for Xenecor, OVAZA and patient education.","link":"/case-studies.html?project=lucky-core"},
+    {"id":"ora-marella","title":"Ora Marella","category":"Campaigns","image":"https://ophaz.com/assets/ora-marella/swimsuit-04.jpg","summary":"Fashion campaign direction across imagery, ads and web banners.","link":"/case-studies.html?project=ora-marella"},
+    {"id":"little-lavender","title":"Little Lavender","category":"Branding","image":"https://ophaz.com/assets/little-lavender/luminous-cream.jpg","summary":"A launch system spanning web, packaging and photography.","link":"/case-studies.html?project=little-lavender"},
+    {"id":"selected-campaigns","title":"Selected Campaigns","category":"Campaigns","image":"https://ophaz.com/assets/selected-campaigns/lubech-shield.png","summary":"Automotive, healthcare and editorial campaign work.","link":"/case-studies.html?project=selected-campaigns"},
+    {"id":"dosti","title":"Dosti","category":"Packaging","image":"https://ophaz.com/assets/dosti/back.webp","summary":"Bilingual conversation cards and packaging made for real use.","link":"/case-studies.html?project=dosti"}
   ]
 }
