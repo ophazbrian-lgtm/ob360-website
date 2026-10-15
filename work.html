@@ -1,88 +1,16 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Work — OB360</title>
-<meta name="description" content="Branding, web, social, and print design work from the OB360 studio.">
-<link rel="icon" href="/images/ob360-logo.png">
-<link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — OB360</title><meta name="description" content="First-party brand, campaign and packaging case studies from the OB360 studio.">
+<link rel="canonical" href="https://ob360.net/work.html"><link rel="icon" href="/images/ob360-logo.png"><link rel="stylesheet" href="/css/styles.css">
+</head><body>
 <div data-include="header"></div>
-
-<div class="page-header">
-  <div class="wrap">
-    <div class="breadcrumb">Home / Work</div>
-    <h1 data-content="pages.work.title">Selected Work</h1>
-    <p data-content="pages.work.intro">A mix of brand identity, web, social, and print work — branding is the throughline, even where the output isn't a logo.</p>
-  </div>
-</div>
-
-<section class="section">
-  <div class="wrap">
-    <div class="chip-row mb-32" data-filters>
-      <button class="chip" data-cat="" style="background:var(--ink);color:var(--white);">All</button>
-      <button class="chip" data-cat="Branding">Branding</button>
-      <button class="chip" data-cat="Web">Web</button>
-      <button class="chip" data-cat="Social Media">Social Media</button>
-      <button class="chip" data-cat="Print">Print</button>
-    </div>
-    <div data-portfolio-grid></div>
-  </div>
-</section>
-
-<section class="section bg-yellow text-center">
-  <div class="wrap">
-    <h2>Like what you see?</h2>
-    <p style="color:var(--ink);max-width:480px;margin:14px auto 24px;">Let's talk about what you're building — we'll quote it within 1 business day.</p>
-    <a href="/contact.html" class="btn btn-primary">Start Your Project →</a>
-  </div>
-</section>
-
-<div data-include="footer"></div>
-
-<script src="/js/site-settings.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/content.js"></script>
+<div class="page-header"><div class="wrap"><div class="breadcrumb">Home / Work</div><h1>Selected Work</h1><p>A collection of first-party brand, campaign and packaging case studies, built around clear systems and real-world use.</p></div></div>
+<section class="section"><div class="wrap"><div class="chip-row mb-32" data-filters><button class="chip" data-cat="" style="background:var(--ink);color:var(--paper);">All</button><button class="chip" data-cat="Branding">Branding</button><button class="chip" data-cat="Campaigns">Campaigns</button><button class="chip" data-cat="Packaging">Packaging</button></div><div data-portfolio-grid></div></div></section>
+<section class="section bg-yellow text-center"><div class="wrap"><h2>Like what you see?</h2><p style="color:var(--ink);max-width:480px;margin:14px auto 24px;">Tell us what you’re building. We’ll reply with a clear next step within one business day.</p><a href="/contact.html" class="btn btn-primary">Discuss your brand →</a></div></section>
+<div data-include="footer"></div><script src="/js/site-settings.js"></script><script src="/js/main.js"></script><script src="/js/content.js"></script>
 <script>
-  let allItems = [];
-
-  function renderFiltered(cat) {
-    const el = document.querySelector('[data-portfolio-grid]');
-    const list = cat ? allItems.filter((i) => i.category === cat) : allItems;
-    if (!list.length) {
-      el.innerHTML = '<p>No projects in this category yet.</p>';
-      return;
-    }
-    el.innerHTML = '<div class="grid-portfolio">' + list.map((p) => `
-      <a href="${p.link}" target="_blank" rel="noopener" class="port-card reveal">
-        <img src="${p.image}" alt="${p.title}" loading="lazy">
-        <div class="port-overlay">
-          <span class="tag">${p.category}</span>
-          <h3>${p.title}</h3>
-        </div>
-      </a>`).join('') + '</div>';
-  }
-
-  document.addEventListener('DOMContentLoaded', async () => {
-    const data = await OB360Content.fetchJSON('/content/portfolio.json');
-    allItems = data.items || [];
-    renderFiltered('');
-
-    document.querySelectorAll('[data-filters] button').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-filters] button').forEach((b) => {
-          b.style.background = 'var(--white)';
-          b.style.color = 'var(--ink)';
-        });
-        btn.style.background = 'var(--ink)';
-        btn.style.color = 'var(--white)';
-        renderFiltered(btn.getAttribute('data-cat'));
-      });
-    });
-  });
-</script>
-</body>
-</html>
+let allItems=[];
+function renderFiltered(cat){const el=document.querySelector("[data-portfolio-grid]");const list=cat?allItems.filter(i=>i.category===cat):allItems;el.innerHTML=list.length?'<div class="grid-portfolio">'+list.map(p=>'<a href="'+p.link+'" class="port-card reveal" aria-label="Read the '+p.title+' case study"><img src="'+p.image+'" alt="'+p.title+'" loading="lazy"><div class="port-overlay"><span class="tag">'+p.category+'</span><h3>'+p.title+'</h3><span style="display:block;margin-top:8px;font-size:.76rem;">'+p.summary+' →</span></div></a>').join("")+"</div>":"<p>No case studies in this category yet.</p>";}
+document.addEventListener("DOMContentLoaded",async()=>{allItems=(await OB360Content.fetchJSON("/content/portfolio.json")).items||[];renderFiltered("");document.querySelectorAll("[data-filters] button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("[data-filters] button").forEach(b=>{b.style.background="var(--paper)";b.style.color="var(--ink)";});btn.style.background="var(--ink)";btn.style.color="var(--paper)";renderFiltered(btn.getAttribute("data-cat"));}));});
+</script></body></html>
